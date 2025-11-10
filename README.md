@@ -1,8 +1,18 @@
 # Noesis-Help
-## Help Documentation for Rich Whitehouse's Noesis
 
-Rich Whitehouse's Noesis is a powerful tool, but it comes with limited and somewhat challenging documentation. The existing documentation can be difficult to understand and does not cover all available functions.
+## Overview
+Rich Whitehouse's Noesis is a powerful tool for model viewing and conversion. However, its official documentation is limited and can be difficult to navigate.
 
-Although I cannot upload files directly from Noesis, I can provide a complete list of functions. Additionally, I offer a debug log Python script. Place this script in the Noesis Python folder to generate debug logs.
+## What's Included
+This repository provides:
+- A complete list of Noesis functions (HTML and text formats)
+- A list of advanced export commands
+- A Python debug log script to generate documentation
+- Mock `noesis` and `rapi` Python modules for IDE compatibility
 
-This documentation is for Noesis version 4.474.
+## How to Use
+1. **Debug Script**: Place the script in the Noesis Python folder to generate debug logs.
+2. **Mock Modules**: Add the mock `noesis.py` and `rapi.py` modules to your plugin project to avoid import errors in your IDE.
+
+## Compatibility
+This documentation is based on Noesis version **4.474**.

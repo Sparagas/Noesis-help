@@ -1,0 +1,1508 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module inc_noesis</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>inc_noesis</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C:/noesisv4474/plugins/python/inc_noesis.py">c:\noesisv4474\plugins\python\inc_noesis.py</a></font></td></tr></table>
+    <p><tt>#You&nbsp;should&nbsp;not&nbsp;modify&nbsp;or&nbsp;redistribute&nbsp;this&nbsp;file,&nbsp;as&nbsp;you&nbsp;may&nbsp;break&nbsp;compatibility&nbsp;with&nbsp;future&nbsp;versions&nbsp;of&nbsp;Noesis.<br>
+#This&nbsp;module&nbsp;also&nbsp;defines&nbsp;several&nbsp;classes&nbsp;which&nbsp;are&nbsp;integrated&nbsp;with&nbsp;the&nbsp;Noesis&nbsp;native&nbsp;binary&nbsp;Python&nbsp;module,&nbsp;so&nbsp;changing&nbsp;those&nbsp;will&nbsp;cause&nbsp;things&nbsp;to&nbsp;explode.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="copy.html">copy</a><br>
+<a href="noesis.html">noesis</a><br>
+</td><td width="25%" valign=top><a href="os.html">os</a><br>
+<a href="rapi.html">rapi</a><br>
+</td><td width="25%" valign=top><a href="struct.html">struct</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeAngles">NoeAngles</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeAnim">NoeAnim</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeBone">NoeBone</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeFileStream">NoeFileStream</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeFlatWeights">NoeFlatWeights</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeGlobalVert">NoeGlobalVert</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeKeyFramedAnim">NoeKeyFramedAnim</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeKeyFramedBone">NoeKeyFramedBone</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeKeyFramedValue">NoeKeyFramedValue</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeMat43">NoeMat43</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeMat44">NoeMat44</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeMaterial">NoeMaterial</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeMesh">NoeMesh</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeModel">NoeModel</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeModelMaterials">NoeModelMaterials</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeMorphFrame">NoeMorphFrame</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoePS2VIFUnpack">NoePS2VIFUnpack</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoePSPVert">NoePSPVert</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoePreserveRapiContext">NoePreserveRapiContext</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeProceduralAnim">NoeProceduralAnim</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeQuat">NoeQuat</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeQuat3">NoeQuat3</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeSpline">NoeSpline</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeSplineKnot">NoeSplineKnot</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeSplineSet">NoeSplineSet</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeTexture">NoeTexture</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeUnpacker">NoeUnpacker</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeBitStream">NoeBitStream</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeUserStream">NoeUserStream</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeVec3">NoeVec3</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeVec4">NoeVec4</a>
+</font></dt><dt><font face="helvetica, arial"><a href="inc_noesis.html#NoeVertWeight">NoeVertWeight</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeAngles">class <strong>NoeAngles</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#Euler&nbsp;angles&nbsp;(can&nbsp;and&nbsp;occasionally&nbsp;is&nbsp;also&nbsp;used&nbsp;to&nbsp;store&nbsp;radians,&nbsp;see&nbsp;also&nbsp;noesis.g_flDegToRad/noesis.g_flRadToDeg&nbsp;constants)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeAngles-__add__"><strong>__add__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeAngles-__div__"><strong>__div__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeAngles-__eq__"><strong>__eq__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeAngles-__getitem__"><strong>__getitem__</strong></a>(self, index)</dt></dl>
+
+<dl><dt><a name="NoeAngles-__init__"><strong>__init__</strong></a>(self, angles<font color="#909090">=(0.0, 0.0, 0.0)</font>)</dt></dl>
+
+<dl><dt><a name="NoeAngles-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeAngles-__mul__"><strong>__mul__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeAngles-__ne__"><strong>__ne__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeAngles-__neg__"><strong>__neg__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeAngles-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeAngles-__setitem__"><strong>__setitem__</strong></a>(self, index, value)</dt></dl>
+
+<dl><dt><a name="NoeAngles-__sub__"><strong>__sub__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeAngles-__truediv__"><strong>__truediv__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeAngles-alerp"><strong>alerp</strong></a>(self, other, degrees)</dt></dl>
+
+<dl><dt><a name="NoeAngles-angleMod"><strong>angleMod</strong></a>(self, f)</dt></dl>
+
+<dl><dt><a name="NoeAngles-angleVectors"><strong>angleVectors</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeAngles-binaryCompare"><strong>binaryCompare</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeAngles-fromBytes"><strong>fromBytes</strong></a>(otherBytes, bigEnd<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeAngles-getStorage"><strong>getStorage</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeAngles-lerp"><strong>lerp</strong></a>(self, other, fraction)</dt></dl>
+
+<dl><dt><a name="NoeAngles-normalize180"><strong>normalize180</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeAngles-normalize360"><strong>normalize360</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeAngles-toBytes"><strong>toBytes</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeAngles-toDegrees"><strong>toDegrees</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeAngles-toMat43"><strong>toMat43</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeAngles-toMat43_ArbConv"><strong>toMat43_ArbConv</strong></a>(self, axes<font color="#909090">=(2, 1, 0)</font>, oris<font color="#909090">=(1.0, -1.0, 1.0)</font>)</dt></dl>
+
+<dl><dt><a name="NoeAngles-toMat43_XYZ"><strong>toMat43_XYZ</strong></a>(self, yFlip<font color="#909090">=1</font>)</dt></dl>
+
+<dl><dt><a name="NoeAngles-toQuat"><strong>toQuat</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeAngles-toRadians"><strong>toRadians</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeAngles-toVec3"><strong>toVec3</strong></a>(self)</dt><dd><tt>#all&nbsp;"to"&nbsp;functions&nbsp;assume&nbsp;angles&nbsp;are&nbsp;in&nbsp;degrees&nbsp;and&nbsp;not&nbsp;radians.</tt></dd></dl>
+
+<dl><dt><a name="NoeAngles-toVec3Direct"><strong>toVec3Direct</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeAnim">class <strong>NoeAnim</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#main&nbsp;animation&nbsp;class<br>
+#bones&nbsp;must&nbsp;be&nbsp;a&nbsp;list&nbsp;of&nbsp;<a href="#NoeBone">NoeBone</a>&nbsp;objects,&nbsp;frameMats&nbsp;must&nbsp;be&nbsp;a&nbsp;flat&nbsp;list&nbsp;of&nbsp;<a href="#NoeMat43">NoeMat43</a>&nbsp;objects<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeAnim-__init__"><strong>__init__</strong></a>(self, name, bones, numFrames, frameMats, frameRate<font color="#909090">=20.0</font>, flags<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeAnim-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeAnim-setFrameRate"><strong>setFrameRate</strong></a>(self, frameRate)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeBitStream">class <strong>NoeBitStream</strong></a>(<a href="inc_noesis.html#NoeUnpacker">NoeUnpacker</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#Universal&nbsp;binary&nbsp;reader/writer,&nbsp;also&nbsp;handles&nbsp;reading/writing&nbsp;data&nbsp;off&nbsp;of&nbsp;byte-aligned&nbsp;boundaries.<br>
+#example&nbsp;use:<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writer&nbsp;=&nbsp;<a href="#NoeBitStream">NoeBitStream</a>()<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writer.<a href="#NoeBitStream-writeString">writeString</a>("Hello.&nbsp;I'm&nbsp;coming&nbsp;to&nbsp;get&nbsp;you.")<br>
+#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;open("somefile.bin",&nbsp;"wb").write(writer.<a href="#NoeBitStream-getBuffer">getBuffer</a>())<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="inc_noesis.html#NoeBitStream">NoeBitStream</a></dd>
+<dd><a href="inc_noesis.html#NoeUnpacker">NoeUnpacker</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="NoeBitStream-__init__"><strong>__init__</strong></a>(self, data<font color="#909090">=None</font>, bigEndian<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-checkEOF"><strong>checkEOF</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-checkOverrun"><strong>checkOverrun</strong></a>(self, size)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-fromUnpacker"><strong>fromUnpacker</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-getBitOffset"><strong>getBitOffset</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-getBuffer"><strong>getBuffer</strong></a>(self, startOfs<font color="#909090">=None</font>, endOfs<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-getOffset"><strong>getOffset</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-getSize"><strong>getSize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-padToSizeFromCurrentOffset"><strong>padToSizeFromCurrentOffset</strong></a>(self, size)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-popOffset"><strong>popOffset</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-pushOffset"><strong>pushOffset</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-read"><strong>read</strong></a>(self, fmtStr)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-readBits"><strong>readBits</strong></a>(self, numBits)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-readBool"><strong>readBool</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-readByte"><strong>readByte</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-readBytes"><strong>readBytes</strong></a>(self, numBytes)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-readDouble"><strong>readDouble</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-readFloat"><strong>readFloat</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-readHalfFloat"><strong>readHalfFloat</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-readInt"><strong>readInt</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-readInt64"><strong>readInt64</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-readRevBits"><strong>readRevBits</strong></a>(self, numBits)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-readShort"><strong>readShort</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-readString"><strong>readString</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-readUByte"><strong>readUByte</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-readUInt"><strong>readUInt</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-readUInt24"><strong>readUInt24</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-readUInt64"><strong>readUInt64</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-readUShort"><strong>readUShort</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-readline"><strong>readline</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-seek"><strong>seek</strong></a>(self, addr, isRelative<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-setBitOffset"><strong>setBitOffset</strong></a>(self, ofs)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-setByteEndianForBits"><strong>setByteEndianForBits</strong></a>(self, bigEndian<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-setEndian"><strong>setEndian</strong></a>(self, bigEndian<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-setOffset"><strong>setOffset</strong></a>(self, ofs)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-tell"><strong>tell</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-toUnpacker"><strong>toUnpacker</strong></a>(self)</dt><dd><tt>#provide&nbsp;interfaces&nbsp;for&nbsp;the&nbsp;<a href="#NoeUnpacker">NoeUnpacker</a>&nbsp;(better&nbsp;to&nbsp;use&nbsp;the&nbsp;base&nbsp;class&nbsp;if&nbsp;you&nbsp;want&nbsp;to&nbsp;use&nbsp;this&nbsp;functionality&nbsp;exclusively)</tt></dd></dl>
+
+<dl><dt><a name="NoeBitStream-writeBits"><strong>writeBits</strong></a>(self, val, numBits)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-writeBool"><strong>writeBool</strong></a>(self, val)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-writeByte"><strong>writeByte</strong></a>(self, val)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-writeBytes"><strong>writeBytes</strong></a>(self, data)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-writeDouble"><strong>writeDouble</strong></a>(self, val)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-writeFloat"><strong>writeFloat</strong></a>(self, val)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-writeHalfFloat"><strong>writeHalfFloat</strong></a>(self, val)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-writeInt"><strong>writeInt</strong></a>(self, val)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-writeInt64"><strong>writeInt64</strong></a>(self, val)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-writeShort"><strong>writeShort</strong></a>(self, val)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-writeString"><strong>writeString</strong></a>(self, str, writeTerminator<font color="#909090">=1</font>)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-writeUByte"><strong>writeUByte</strong></a>(self, val)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-writeUInt"><strong>writeUInt</strong></a>(self, val)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-writeUInt64"><strong>writeUInt64</strong></a>(self, val)</dt></dl>
+
+<dl><dt><a name="NoeBitStream-writeUShort"><strong>writeUShort</strong></a>(self, val)</dt></dl>
+
+<hr>
+Data descriptors inherited from <a href="inc_noesis.html#NoeUnpacker">NoeUnpacker</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeBone">class <strong>NoeBone</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#model&nbsp;bone.&nbsp;bone&nbsp;hierarchy&nbsp;is&nbsp;defined&nbsp;by&nbsp;matching&nbsp;bone&nbsp;name&nbsp;to&nbsp;parentName.<br>
+#index&nbsp;is&nbsp;used&nbsp;to&nbsp;ensure&nbsp;order&nbsp;and&nbsp;match&nbsp;to&nbsp;vertex&nbsp;weights.&nbsp;it&nbsp;is&nbsp;possible&nbsp;to&nbsp;have&nbsp;gaps&nbsp;in&nbsp;your&nbsp;bone&nbsp;list&nbsp;by&nbsp;specifying&nbsp;out-of-order&nbsp;indices.<br>
+#NOTE:&nbsp;you&nbsp;don't&nbsp;need&nbsp;to&nbsp;specify&nbsp;parentIndex&nbsp;as&nbsp;long&nbsp;as&nbsp;you&nbsp;specify&nbsp;parentName.&nbsp;parentIndex&nbsp;is&nbsp;optional.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeBone-__init__"><strong>__init__</strong></a>(self, index, name, matrix, parentName<font color="#909090">=None</font>, parentIndex<font color="#909090">=-1</font>)</dt></dl>
+
+<dl><dt><a name="NoeBone-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBone-getMatrix"><strong>getMatrix</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeBone-setMatrix"><strong>setMatrix</strong></a>(self, matrix)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeFileStream">class <strong>NoeFileStream</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#not&nbsp;really&nbsp;fully&nbsp;compatible&nbsp;with&nbsp;<a href="#NoeBitStream">NoeBitStream</a>,&nbsp;but&nbsp;may&nbsp;be&nbsp;swapped&nbsp;out&nbsp;in&nbsp;some&nbsp;limited&nbsp;use&nbsp;cases<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeFileStream-__init__"><strong>__init__</strong></a>(self, f, bigEndian<font color="#909090">=0</font>)</dt><dd><tt>#f&nbsp;should&nbsp;be&nbsp;a&nbsp;file&nbsp;handle&nbsp;which&nbsp;has&nbsp;already&nbsp;been&nbsp;opened</tt></dd></dl>
+
+<dl><dt><a name="NoeFileStream-checkEOF"><strong>checkEOF</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeFileStream-readBool"><strong>readBool</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeFileStream-readByte"><strong>readByte</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeFileStream-readBytes"><strong>readBytes</strong></a>(self, numBytes)</dt></dl>
+
+<dl><dt><a name="NoeFileStream-readDouble"><strong>readDouble</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeFileStream-readFloat"><strong>readFloat</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeFileStream-readInt"><strong>readInt</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeFileStream-readInt64"><strong>readInt64</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeFileStream-readShort"><strong>readShort</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeFileStream-readUByte"><strong>readUByte</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeFileStream-readUInt"><strong>readUInt</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeFileStream-readUInt24"><strong>readUInt24</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeFileStream-readUInt64"><strong>readUInt64</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeFileStream-readUShort"><strong>readUShort</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeFileStream-seek"><strong>seek</strong></a>(self, addr, isRelative<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeFileStream-setEndian"><strong>setEndian</strong></a>(self, bigEndian<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeFileStream-tell"><strong>tell</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeFlatWeights">class <strong>NoeFlatWeights</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#converts&nbsp;a&nbsp;list&nbsp;of&nbsp;<a href="#NoeVertWeight">NoeVertWeight</a>&nbsp;objects&nbsp;into&nbsp;a&nbsp;flat&nbsp;list<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeFlatWeights-__init__"><strong>__init__</strong></a>(self, vwList)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeGlobalVert">class <strong>NoeGlobalVert</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#global&nbsp;vertex&nbsp;which&nbsp;references&nbsp;per-mesh&nbsp;data<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeGlobalVert-__init__"><strong>__init__</strong></a>(self, meshIndex, vertIndex)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeKeyFramedAnim">class <strong>NoeKeyFramedAnim</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#keyframed&nbsp;animation&nbsp;class<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeKeyFramedAnim-__init__"><strong>__init__</strong></a>(self, name, bones, kfBones, frameRate<font color="#909090">=20.0</font>, flags<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeKeyFramedAnim-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeKeyFramedBone">class <strong>NoeKeyFramedBone</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#keyframed&nbsp;bone&nbsp;class<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeKeyFramedBone-__init__"><strong>__init__</strong></a>(self, boneIndex)</dt></dl>
+
+<dl><dt><a name="NoeKeyFramedBone-hasAnyKeys"><strong>hasAnyKeys</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeKeyFramedBone-setRotation"><strong>setRotation</strong></a>(self, keys, type<font color="#909090">=0</font>, interpolationType<font color="#909090">=0</font>)</dt><dd><tt>#for&nbsp;the&nbsp;set&nbsp;methods,&nbsp;keys&nbsp;should&nbsp;be&nbsp;a&nbsp;list&nbsp;of&nbsp;<a href="#NoeKeyFramedValue">NoeKeyFramedValue</a>&nbsp;or&nbsp;an&nbsp;<a href="builtins.html#object">object</a>&nbsp;with&nbsp;similarly&nbsp;available&nbsp;members</tt></dd></dl>
+
+<dl><dt><a name="NoeKeyFramedBone-setScale"><strong>setScale</strong></a>(self, keys, type<font color="#909090">=0</font>, interpolationType<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeKeyFramedBone-setTranslation"><strong>setTranslation</strong></a>(self, keys, type<font color="#909090">=0</font>, interpolationType<font color="#909090">=0</font>)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeKeyFramedValue">class <strong>NoeKeyFramedValue</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#keyframe&nbsp;data&nbsp;type<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeKeyFramedValue-__init__"><strong>__init__</strong></a>(self, time, value)</dt><dd><tt>#value&nbsp;may&nbsp;be&nbsp;<a href="#NoeQuat">NoeQuat</a>,&nbsp;<a href="#NoeVec3">NoeVec3</a>,&nbsp;float,&nbsp;etc.&nbsp;depending&nbsp;on&nbsp;the&nbsp;data&nbsp;type&nbsp;specified</tt></dd></dl>
+
+<dl><dt><a name="NoeKeyFramedValue-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeKeyFramedValue-setComponentIndex"><strong>setComponentIndex</strong></a>(self, componentIndex)</dt></dl>
+
+<dl><dt><a name="NoeKeyFramedValue-setEulerSingleAxisIndex"><strong>setEulerSingleAxisIndex</strong></a>(self, axisIndex)</dt></dl>
+
+<dl><dt><a name="NoeKeyFramedValue-setExtraData"><strong>setExtraData</strong></a>(self, extraData)</dt></dl>
+
+<dl><dt><a name="NoeKeyFramedValue-setFlags"><strong>setFlags</strong></a>(self, flags)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeMat43">class <strong>NoeMat43</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#4x3&nbsp;matrix<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeMat43-__add__"><strong>__add__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeMat43-__eq__"><strong>__eq__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeMat43-__getitem__"><strong>__getitem__</strong></a>(self, index)</dt></dl>
+
+<dl><dt><a name="NoeMat43-__init__"><strong>__init__</strong></a>(self, mat43<font color="#909090">=((1.0, 0.0, 0.0), (0.0, 1.0, 0.0), (0.0, 0.0, 1.0), (0.0, 0.0, 0.0))</font>)</dt></dl>
+
+<dl><dt><a name="NoeMat43-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMat43-__mul__"><strong>__mul__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeMat43-__ne__"><strong>__ne__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeMat43-__neg__"><strong>__neg__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMat43-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMat43-__setitem__"><strong>__setitem__</strong></a>(self, index, value)</dt></dl>
+
+<dl><dt><a name="NoeMat43-__sub__"><strong>__sub__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeMat43-binaryCompare"><strong>binaryCompare</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeMat43-fromBytes"><strong>fromBytes</strong></a>(otherBytes, bigEnd<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeMat43-getStorage"><strong>getStorage</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMat43-inverse"><strong>inverse</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMat43-isSkewed"><strong>isSkewed</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMat43-lerp"><strong>lerp</strong></a>(self, other, fraction)</dt></dl>
+
+<dl><dt><a name="NoeMat43-orthogonalize"><strong>orthogonalize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMat43-rotate"><strong>rotate</strong></a>(self, degrees, rotAngles, transposeRot<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeMat43-slerp"><strong>slerp</strong></a>(self, other, fraction)</dt></dl>
+
+<dl><dt><a name="NoeMat43-swapHandedness"><strong>swapHandedness</strong></a>(self, axis<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeMat43-toAngles"><strong>toAngles</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMat43-toBytes"><strong>toBytes</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMat43-toMat44"><strong>toMat44</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMat43-toQuat"><strong>toQuat</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMat43-transformNormal"><strong>transformNormal</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeMat43-transformPoint"><strong>transformPoint</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeMat43-transformVec4"><strong>transformVec4</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeMat43-translate"><strong>translate</strong></a>(self, trnVector)</dt></dl>
+
+<dl><dt><a name="NoeMat43-transpose"><strong>transpose</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeMat44">class <strong>NoeMat44</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#4x4&nbsp;matrix<br>
+#<a href="#NoeMat44">NoeMat44</a>&nbsp;operations&nbsp;(including&nbsp;to&nbsp;and&nbsp;from&nbsp;<a href="#NoeMat43">NoeMat43</a>)&nbsp;have&nbsp;rows&nbsp;and&nbsp;columns&nbsp;swapped<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeMat44-__add__"><strong>__add__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeMat44-__eq__"><strong>__eq__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeMat44-__getitem__"><strong>__getitem__</strong></a>(self, index)</dt></dl>
+
+<dl><dt><a name="NoeMat44-__init__"><strong>__init__</strong></a>(self, mat44<font color="#909090">=((1.0, 0.0, 0.0, 0.0), (0.0, 1.0, 0.0, 0.0), (0.0, 0.0, 1.0, 0.0), (0.0, 0.0, 0.0, 1.0))</font>)</dt></dl>
+
+<dl><dt><a name="NoeMat44-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMat44-__mul__"><strong>__mul__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeMat44-__ne__"><strong>__ne__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeMat44-__neg__"><strong>__neg__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMat44-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMat44-__setitem__"><strong>__setitem__</strong></a>(self, index, value)</dt></dl>
+
+<dl><dt><a name="NoeMat44-__sub__"><strong>__sub__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeMat44-binaryCompare"><strong>binaryCompare</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeMat44-fromBytes"><strong>fromBytes</strong></a>(otherBytes, bigEnd<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeMat44-getStorage"><strong>getStorage</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMat44-inverse"><strong>inverse</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMat44-rotate"><strong>rotate</strong></a>(self, degrees, rotAngles)</dt></dl>
+
+<dl><dt><a name="NoeMat44-swapHandedness"><strong>swapHandedness</strong></a>(self, axis<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeMat44-toBytes"><strong>toBytes</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMat44-toMat43"><strong>toMat43</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMat44-transformVec4"><strong>transformVec4</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeMat44-translate"><strong>translate</strong></a>(self, trnVector)</dt></dl>
+
+<dl><dt><a name="NoeMat44-transpose"><strong>transpose</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeMaterial">class <strong>NoeMaterial</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#material&nbsp;<a href="builtins.html#object">object</a><br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeMaterial-__init__"><strong>__init__</strong></a>(self, name, texName)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setAlphaTest"><strong>setAlphaTest</strong></a>(self, alphaVal)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setAmbientColor"><strong>setAmbientColor</strong></a>(self, clr<font color="#909090">=[0.0, 0.0, 0.0, 0.0]</font>)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setAnisotropy"><strong>setAnisotropy</strong></a>(self, anisoScale, anisoAngle)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setBlendMode"><strong>setBlendMode</strong></a>(self, blendSrc, blendDst)</dt><dd><tt>#uses&nbsp;gl&nbsp;blend&nbsp;string&nbsp;names&nbsp;(GL_ONE,&nbsp;GL_SRC_COLOR,&nbsp;etc)</tt></dd></dl>
+
+<dl><dt><a name="NoeMaterial-setBumpTexture"><strong>setBumpTexture</strong></a>(self, texName)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setDefaultBlend"><strong>setDefaultBlend</strong></a>(self, defaultBlend)</dt><dd><tt>#enables/disables&nbsp;default&nbsp;blending</tt></dd></dl>
+
+<dl><dt><a name="NoeMaterial-setDiffuseColor"><strong>setDiffuseColor</strong></a>(self, clr<font color="#909090">=[1.0, 1.0, 1.0, 1.0]</font>)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setEnvColor"><strong>setEnvColor</strong></a>(self, clr<font color="#909090">=[1.0, 1.0, 1.0, 0.8]</font>)</dt><dd><tt>#4th&nbsp;component&nbsp;is&nbsp;fresnel&nbsp;term&nbsp;scale</tt></dd></dl>
+
+<dl><dt><a name="NoeMaterial-setEnvTexture"><strong>setEnvTexture</strong></a>(self, texName)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_diffuse_a"><strong>setExpr_diffuse_a</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_diffuse_b"><strong>setExpr_diffuse_b</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_diffuse_g"><strong>setExpr_diffuse_g</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_diffuse_r"><strong>setExpr_diffuse_r</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_normaltexidx"><strong>setExpr_normaltexidx</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_specular_b"><strong>setExpr_specular_b</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_specular_exp"><strong>setExpr_specular_exp</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_specular_g"><strong>setExpr_specular_g</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_specular_r"><strong>setExpr_specular_r</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_speculartexidx"><strong>setExpr_speculartexidx</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_texidx"><strong>setExpr_texidx</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_uvrot_x"><strong>setExpr_uvrot_x</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_uvrot_y"><strong>setExpr_uvrot_y</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_uvrot_z"><strong>setExpr_uvrot_z</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_uvtrans_x"><strong>setExpr_uvtrans_x</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_uvtrans_y"><strong>setExpr_uvtrans_y</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_uvtrans_z"><strong>setExpr_uvtrans_z</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_vclr_a"><strong>setExpr_vclr_a</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_vclr_b"><strong>setExpr_vclr_b</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_vclr_g"><strong>setExpr_vclr_g</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_vclr_r"><strong>setExpr_vclr_r</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_vnrm_x"><strong>setExpr_vnrm_x</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_vnrm_y"><strong>setExpr_vnrm_y</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_vnrm_z"><strong>setExpr_vnrm_z</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_vpos_x"><strong>setExpr_vpos_x</strong></a>(self, exprStr)</dt><dd><tt>#sets&nbsp;expression&nbsp;strings.&nbsp;see&nbsp;pluginshare.h&nbsp;for&nbsp;a&nbsp;list&nbsp;of&nbsp;expression&nbsp;functions&nbsp;and&nbsp;variables.</tt></dd></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_vpos_y"><strong>setExpr_vpos_y</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_vpos_z"><strong>setExpr_vpos_z</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_vuv_u"><strong>setExpr_vuv_u</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setExpr_vuv_v"><strong>setExpr_vuv_v</strong></a>(self, exprStr)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setFlags"><strong>setFlags</strong></a>(self, flags, disableLighting<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setFlags2"><strong>setFlags2</strong></a>(self, flags2)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setMetal"><strong>setMetal</strong></a>(self, metalScale, metalBias)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setNextPass"><strong>setNextPass</strong></a>(self, nextPass)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setNormalTexture"><strong>setNormalTexture</strong></a>(self, texName)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setOcclTexture"><strong>setOcclTexture</strong></a>(self, texName)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setOcclusionScale"><strong>setOcclusionScale</strong></a>(self, occlScale)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setOpacityTexture"><strong>setOpacityTexture</strong></a>(self, texName)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setRimLighting"><strong>setRimLighting</strong></a>(self, rimColor<font color="#909090">=[1.0, 1.0, 1.0]</font>, rimSize<font color="#909090">=1.0</font>, rimPow<font color="#909090">=3.0</font>, rimBias<font color="#909090">=0.0</font>, rimOfs<font color="#909090">=[0.0, 0.0, 0.0]</font>)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setRoughness"><strong>setRoughness</strong></a>(self, roughnessScale, roughnessBias)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setSkipRender"><strong>setSkipRender</strong></a>(self, skipRender)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setSpecularColor"><strong>setSpecularColor</strong></a>(self, clr<font color="#909090">=[1.0, 1.0, 1.0, 8.0]</font>)</dt><dd><tt>#4th&nbsp;component&nbsp;is&nbsp;the&nbsp;exponent</tt></dd></dl>
+
+<dl><dt><a name="NoeMaterial-setSpecularSwizzle"><strong>setSpecularSwizzle</strong></a>(self, specularSwizzle)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setSpecularTexture"><strong>setSpecularTexture</strong></a>(self, texName)</dt></dl>
+
+<dl><dt><a name="NoeMaterial-setTexture"><strong>setTexture</strong></a>(self, texName)</dt><dd><tt>#texture&nbsp;names&nbsp;must&nbsp;match&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;texture&nbsp;in&nbsp;the&nbsp;corresponding&nbsp;texture&nbsp;list&nbsp;to&nbsp;be&nbsp;applied</tt></dd></dl>
+
+<dl><dt><a name="NoeMaterial-setUserData"><strong>setUserData</strong></a>(self, userTag, userData)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeMesh">class <strong>NoeMesh</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#main&nbsp;mesh&nbsp;class<br>
+#all&nbsp;vertex&nbsp;types&nbsp;(positions,&nbsp;normals,&nbsp;uv's,&nbsp;etc)&nbsp;are&nbsp;expected&nbsp;to&nbsp;match&nbsp;in&nbsp;count,&nbsp;as&nbsp;they&nbsp;all&nbsp;share&nbsp;a&nbsp;single&nbsp;triangle&nbsp;list.<br>
+#it's&nbsp;recommended&nbsp;that&nbsp;you&nbsp;use&nbsp;the&nbsp;rapi.rpg&nbsp;interface&nbsp;if&nbsp;you&nbsp;want&nbsp;a&nbsp;convenient&nbsp;means&nbsp;to&nbsp;convert&nbsp;different&nbsp;data/primitive&nbsp;types&nbsp;into&nbsp;a&nbsp;<a href="#NoeModel">NoeModel</a>&nbsp;with&nbsp;NoeMeshes.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeMesh-__init__"><strong>__init__</strong></a>(self, triList, posList, name<font color="#909090">='default'</font>, materialName<font color="#909090">='default'</font>, glbVertIdx<font color="#909090">=-1</font>, glbTriIdx<font color="#909090">=-1</font>)</dt></dl>
+
+<dl><dt><a name="NoeMesh-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeMesh-componentEmpty"><strong>componentEmpty</strong></a>(component)</dt><dd><tt>#convenience&nbsp;function&nbsp;for&nbsp;checking&nbsp;if&nbsp;vertex&nbsp;components&nbsp;have&nbsp;valid&nbsp;content</tt></dd></dl>
+
+<dl><dt><a name="NoeMesh-setBoneMap"><strong>setBoneMap</strong></a>(self, boneMap)</dt></dl>
+
+<dl><dt><a name="NoeMesh-setColors"><strong>setColors</strong></a>(self, clrList)</dt><dd><tt>#color&nbsp;lists&nbsp;are&nbsp;rgba&nbsp;values&nbsp;stored&nbsp;in&nbsp;vec4's</tt></dd></dl>
+
+<dl><dt><a name="NoeMesh-setFlatWeights"><strong>setFlatWeights</strong></a>(self, idxList, valList, weightsPerVert)</dt><dd><tt>#when&nbsp;provided,&nbsp;each&nbsp;list&nbsp;will&nbsp;be&nbsp;of&nbsp;size&nbsp;len(self.<strong>positions</strong>)&nbsp;*&nbsp;self.<strong>flatWeightsPerVert</strong>.<br>
+#will&nbsp;only&nbsp;be&nbsp;provided&nbsp;when&nbsp;NMSHAREDFL_FLATWEIGHTS&nbsp;is&nbsp;used.&nbsp;as&nbsp;a&nbsp;convenience,&nbsp;NMSHAREDFL_FLATWEIGHTS_FORCE4&nbsp;can&nbsp;be&nbsp;used&nbsp;in&nbsp;addition&nbsp;to&nbsp;force&nbsp;4&nbsp;weights&nbsp;per&nbsp;vert.</tt></dd></dl>
+
+<dl><dt><a name="NoeMesh-setIndices"><strong>setIndices</strong></a>(self, triList)</dt><dd><tt>#triangle&nbsp;lists&nbsp;are&nbsp;single-dimension&nbsp;lists&nbsp;of&nbsp;ints,&nbsp;expected&nbsp;to&nbsp;be&nbsp;divisible&nbsp;by&nbsp;3</tt></dd></dl>
+
+<dl><dt><a name="NoeMesh-setLightmap"><strong>setLightmap</strong></a>(self, lmMatName)</dt></dl>
+
+<dl><dt><a name="NoeMesh-setMaterial"><strong>setMaterial</strong></a>(self, materialName)</dt></dl>
+
+<dl><dt><a name="NoeMesh-setMorphList"><strong>setMorphList</strong></a>(self, morphList)</dt></dl>
+
+<dl><dt><a name="NoeMesh-setName"><strong>setName</strong></a>(self, name)</dt></dl>
+
+<dl><dt><a name="NoeMesh-setNormals"><strong>setNormals</strong></a>(self, nrmList)</dt></dl>
+
+<dl><dt><a name="NoeMesh-setPositions"><strong>setPositions</strong></a>(self, posList)</dt></dl>
+
+<dl><dt><a name="NoeMesh-setPrimGlobals"><strong>setPrimGlobals</strong></a>(self, glbVertIdx, glbTriIdx)</dt><dd><tt>#indices&nbsp;into&nbsp;the&nbsp;parent&nbsp;model's&nbsp;globalVtx/globalIdx&nbsp;lists&nbsp;on&nbsp;export</tt></dd></dl>
+
+<dl><dt><a name="NoeMesh-setSourceName"><strong>setSourceName</strong></a>(self, sourceName)</dt></dl>
+
+<dl><dt><a name="NoeMesh-setTangents"><strong>setTangents</strong></a>(self, tanList, slot<font color="#909090">=0</font>)</dt><dd><tt>#translation&nbsp;component&nbsp;of&nbsp;<a href="#NoeMat43">NoeMat43</a>&nbsp;is&nbsp;ignored&nbsp;for&nbsp;tangents&nbsp;(matrix[0]=normal,&nbsp;matrix[1]=tangent,&nbsp;matrix[2]=bitangent)</tt></dd></dl>
+
+<dl><dt><a name="NoeMesh-setTransformedVerts"><strong>setTransformedVerts</strong></a>(self, positions, normals)</dt><dd><tt>#not&nbsp;currently&nbsp;used,&nbsp;planned&nbsp;in&nbsp;a&nbsp;future&nbsp;update</tt></dd></dl>
+
+<dl><dt><a name="NoeMesh-setUVs"><strong>setUVs</strong></a>(self, uvList, slot<font color="#909090">=0</font>)</dt><dd><tt>#uv&nbsp;z&nbsp;component&nbsp;should&nbsp;typically&nbsp;be&nbsp;0</tt></dd></dl>
+
+<dl><dt><a name="NoeMesh-setUserStreams"><strong>setUserStreams</strong></a>(self, userStreamList)</dt></dl>
+
+<dl><dt><a name="NoeMesh-setWeights"><strong>setWeights</strong></a>(self, weightList)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeModel">class <strong>NoeModel</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#main&nbsp;model&nbsp;class<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeModel-__init__"><strong>__init__</strong></a>(self, meshes<font color="#909090">=[]</font>, bones<font color="#909090">=[]</font>, anims<font color="#909090">=[]</font>, modelMats<font color="#909090">=None</font>)</dt></dl>
+
+<dl><dt><a name="NoeModel-setAnims"><strong>setAnims</strong></a>(self, anims)</dt><dd><tt>#animations&nbsp;will&nbsp;be&nbsp;applied&nbsp;to&nbsp;the&nbsp;model&nbsp;based&nbsp;on&nbsp;matching&nbsp;bone&nbsp;names&nbsp;from&nbsp;their&nbsp;local&nbsp;bone&nbsp;lists</tt></dd></dl>
+
+<dl><dt><a name="NoeModel-setBones"><strong>setBones</strong></a>(self, bones)</dt></dl>
+
+<dl><dt><a name="NoeModel-setMeshes"><strong>setMeshes</strong></a>(self, meshes)</dt></dl>
+
+<dl><dt><a name="NoeModel-setModelMaterials"><strong>setModelMaterials</strong></a>(self, modelMats)</dt></dl>
+
+<dl><dt><a name="NoeModel-setPrimGlobals"><strong>setPrimGlobals</strong></a>(self, globalVtx, globalIdx)</dt><dd><tt>#note&nbsp;that&nbsp;globalVtx/Idx&nbsp;are&nbsp;ignored&nbsp;by&nbsp;Noesis&nbsp;(only&nbsp;mesh&nbsp;geometry&nbsp;is&nbsp;used),&nbsp;but&nbsp;are&nbsp;provided&nbsp;for&nbsp;convenience&nbsp;when&nbsp;exporting</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeModelMaterials">class <strong>NoeModelMaterials</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#material&nbsp;and&nbsp;texture&nbsp;lists&nbsp;must&nbsp;be&nbsp;provided&nbsp;to&nbsp;the&nbsp;Noesis&nbsp;API&nbsp;in&nbsp;one&nbsp;of&nbsp;these&nbsp;containers&nbsp;(for&nbsp;the&nbsp;purpose&nbsp;of&nbsp;possible&nbsp;future&nbsp;extension)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeModelMaterials-__init__"><strong>__init__</strong></a>(self, texList, matList)</dt><dd><tt>#must&nbsp;be&nbsp;initialized&nbsp;with&nbsp;lists&nbsp;of&nbsp;<a href="#NoeTexture">NoeTexture</a>&nbsp;and&nbsp;<a href="#NoeMaterial">NoeMaterial</a></tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeMorphFrame">class <strong>NoeMorphFrame</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#vertex&nbsp;morph&nbsp;frame&nbsp;-&nbsp;represents&nbsp;a&nbsp;single&nbsp;frame&nbsp;of&nbsp;vertex&nbsp;morph&nbsp;animation<br>
+#note&nbsp;that&nbsp;it&nbsp;is&nbsp;valid&nbsp;for&nbsp;normals&nbsp;to&nbsp;be&nbsp;None&nbsp;(some&nbsp;models&nbsp;only&nbsp;want&nbsp;to&nbsp;provide&nbsp;positions&nbsp;for&nbsp;vertex&nbsp;anims),&nbsp;but&nbsp;positions&nbsp;should&nbsp;always&nbsp;be&nbsp;a&nbsp;valid&nbsp;list.<br>
+#a&nbsp;vertex&nbsp;morph&nbsp;frame&nbsp;should&nbsp;always&nbsp;have&nbsp;as&nbsp;many&nbsp;entries&nbsp;in&nbsp;its&nbsp;vertex&nbsp;lists&nbsp;as&nbsp;other&nbsp;vertex&nbsp;components&nbsp;in&nbsp;the&nbsp;mesh&nbsp;it&nbsp;belongs&nbsp;to.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeMorphFrame-__init__"><strong>__init__</strong></a>(self, positions, normals)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoePS2VIFUnpack">class <strong>NoePS2VIFUnpack</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#returned&nbsp;in&nbsp;a&nbsp;list&nbsp;by&nbsp;unpackPS2VIF<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoePS2VIFUnpack-__init__"><strong>__init__</strong></a>(self, data, numElems, elemBits)</dt></dl>
+
+<dl><dt><a name="NoePS2VIFUnpack-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoePSPVert">class <strong>NoePSPVert</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#returned&nbsp;by&nbsp;decodePSPVert<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoePSPVert-__init__"><strong>__init__</strong></a>(self, vertexDict)</dt></dl>
+
+<dl><dt><a name="NoePSPVert-bindBuffers"><strong>bindBuffers</strong></a>(self, vertexData, bindWeights<font color="#909090">=True</font>)</dt><dd><tt>#bindBuffers&nbsp;takes&nbsp;a&nbsp;chunk&nbsp;of&nbsp;data&nbsp;and&nbsp;binds&nbsp;buffers&nbsp;using&nbsp;the&nbsp;provided&nbsp;properties.<br>
+#only&nbsp;call&nbsp;this&nbsp;function&nbsp;if&nbsp;there's&nbsp;an&nbsp;active&nbsp;rapi&nbsp;module&nbsp;instance.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoePreserveRapiContext">class <strong>NoePreserveRapiContext</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoePreserveRapiContext-__enter__"><strong>__enter__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoePreserveRapiContext-__exit__"><strong>__exit__</strong></a>(self, exc_type, exc_value, traceback)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeProceduralAnim">class <strong>NoeProceduralAnim</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#procedural&nbsp;animation&nbsp;<a href="builtins.html#object">object</a>&nbsp;-&nbsp;specifies&nbsp;some&nbsp;parameters&nbsp;which&nbsp;can&nbsp;be&nbsp;baked&nbsp;into&nbsp;an&nbsp;animation&nbsp;using&nbsp;createProceduralAnim<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeProceduralAnim-__init__"><strong>__init__</strong></a>(self, boneName, angleAmount, axis, timeScale)</dt></dl>
+
+<dl><dt><a name="NoeProceduralAnim-setAngleAmount"><strong>setAngleAmount</strong></a>(self, angleAmount)</dt></dl>
+
+<dl><dt><a name="NoeProceduralAnim-setAxis"><strong>setAxis</strong></a>(self, axis)</dt></dl>
+
+<dl><dt><a name="NoeProceduralAnim-setBoneName"><strong>setBoneName</strong></a>(self, boneName)</dt></dl>
+
+<dl><dt><a name="NoeProceduralAnim-setTimeScale"><strong>setTimeScale</strong></a>(self, timeScale)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeQuat">class <strong>NoeQuat</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#quaternion<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeQuat-__add__"><strong>__add__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeQuat-__eq__"><strong>__eq__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeQuat-__getitem__"><strong>__getitem__</strong></a>(self, index)</dt></dl>
+
+<dl><dt><a name="NoeQuat-__init__"><strong>__init__</strong></a>(self, quat<font color="#909090">=(0.0, 0.0, 0.0, 1.0)</font>)</dt></dl>
+
+<dl><dt><a name="NoeQuat-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeQuat-__mul__"><strong>__mul__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeQuat-__ne__"><strong>__ne__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeQuat-__neg__"><strong>__neg__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeQuat-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeQuat-__setitem__"><strong>__setitem__</strong></a>(self, index, value)</dt></dl>
+
+<dl><dt><a name="NoeQuat-__sub__"><strong>__sub__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeQuat-binaryCompare"><strong>binaryCompare</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeQuat-fromBytes"><strong>fromBytes</strong></a>(otherBytes, bigEnd<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeQuat-getStorage"><strong>getStorage</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeQuat-length"><strong>length</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeQuat-lerp"><strong>lerp</strong></a>(self, other, fraction)</dt></dl>
+
+<dl><dt><a name="NoeQuat-normalize"><strong>normalize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeQuat-slerp"><strong>slerp</strong></a>(self, other, fraction)</dt></dl>
+
+<dl><dt><a name="NoeQuat-toBytes"><strong>toBytes</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeQuat-toMat43"><strong>toMat43</strong></a>(self, transposed<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeQuat-toMatAngles"><strong>toMatAngles</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeQuat-toQuat3"><strong>toQuat3</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeQuat-transformNormal"><strong>transformNormal</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeQuat-transformPoint"><strong>transformPoint</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeQuat-transpose"><strong>transpose</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeQuat3">class <strong>NoeQuat3</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#packed&nbsp;quaternion<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeQuat3-__eq__"><strong>__eq__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeQuat3-__getitem__"><strong>__getitem__</strong></a>(self, index)</dt></dl>
+
+<dl><dt><a name="NoeQuat3-__init__"><strong>__init__</strong></a>(self, quat3<font color="#909090">=(0.0, 0.0, 0.0)</font>)</dt></dl>
+
+<dl><dt><a name="NoeQuat3-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeQuat3-__ne__"><strong>__ne__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeQuat3-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeQuat3-__setitem__"><strong>__setitem__</strong></a>(self, index, value)</dt></dl>
+
+<dl><dt><a name="NoeQuat3-binaryCompare"><strong>binaryCompare</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeQuat3-fromBytes"><strong>fromBytes</strong></a>(otherBytes, bigEnd<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeQuat3-getStorage"><strong>getStorage</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeQuat3-toBytes"><strong>toBytes</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeQuat3-toQuat"><strong>toQuat</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeSpline">class <strong>NoeSpline</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#spline<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeSpline-__init__"><strong>__init__</strong></a>(self, knots, mins, maxs, flags)</dt></dl>
+
+<dl><dt><a name="NoeSpline-getLastOut"><strong>getLastOut</strong></a>(self, index)</dt></dl>
+
+<dl><dt><a name="NoeSpline-getLastPos"><strong>getLastPos</strong></a>(self, index)</dt></dl>
+
+<dl><dt><a name="NoeSpline-plotPoints"><strong>plotPoints</strong></a>(self, step, plotFunction)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeSplineKnot">class <strong>NoeSplineKnot</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#spline&nbsp;knot<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeSplineKnot-__init__"><strong>__init__</strong></a>(self, pos, inVec, outVec)</dt></dl>
+
+<dl><dt><a name="NoeSplineKnot-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeSplineSet">class <strong>NoeSplineSet</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#spline&nbsp;set<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeSplineSet-__init__"><strong>__init__</strong></a>(self, splines, mins, maxs)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeTexture">class <strong>NoeTexture</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#texture&nbsp;<a href="builtins.html#object">object</a><br>
+#for&nbsp;supported&nbsp;pixel&nbsp;types,&nbsp;look&nbsp;at&nbsp;constants&nbsp;exposed&nbsp;by&nbsp;noesis&nbsp;module,&nbsp;such&nbsp;as&nbsp;NOESISTEX_RGB24,&nbsp;NOESISTEX_RGBA32,&nbsp;NOESISTEX_DXT1,&nbsp;etc.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeTexture-__init__"><strong>__init__</strong></a>(self, name, width, height, pixelData, pixelType<font color="#909090">=1</font>)</dt></dl>
+
+<dl><dt><a name="NoeTexture-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeTexture-setFlags"><strong>setFlags</strong></a>(self, flags)</dt></dl>
+
+<dl><dt><a name="NoeTexture-setFrameInfo"><strong>setFrameInfo</strong></a>(self, frameIndex, frameDelay)</dt></dl>
+
+<dl><dt><a name="NoeTexture-setHDRData"><strong>setHDRData</strong></a>(self, data, dataType, hdrFlags)</dt></dl>
+
+<dl><dt><a name="NoeTexture-setMipCount"><strong>setMipCount</strong></a>(self, mipCount)</dt></dl>
+
+<dl><dt><a name="NoeTexture-setPaletteData"><strong>setPaletteData</strong></a>(self, palColorData, palColorSize, palIndexData, palIndexSize, palFlags)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeUnpacker">class <strong>NoeUnpacker</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#class&nbsp;wrapper&nbsp;to&nbsp;parse&nbsp;through&nbsp;some&nbsp;bytes&nbsp;using&nbsp;the&nbsp;struct&nbsp;unpacker<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeUnpacker-__init__"><strong>__init__</strong></a>(self, data)</dt></dl>
+
+<dl><dt><a name="NoeUnpacker-checkOverrun"><strong>checkOverrun</strong></a>(self, size)</dt></dl>
+
+<dl><dt><a name="NoeUnpacker-read"><strong>read</strong></a>(self, fmtStr)</dt></dl>
+
+<dl><dt><a name="NoeUnpacker-seek"><strong>seek</strong></a>(self, addr, isRelative<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeUnpacker-tell"><strong>tell</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeUserStream">class <strong>NoeUserStream</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#user&nbsp;stream&nbsp;class&nbsp;-&nbsp;arbitrary&nbsp;user-named&nbsp;streams&nbsp;of&nbsp;vertex&nbsp;data<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeUserStream-__init__"><strong>__init__</strong></a>(self, name, data, elemSize, flags)</dt></dl>
+
+<dl><dt><a name="NoeUserStream-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeVec3">class <strong>NoeVec3</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#3-component&nbsp;Vector<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeVec3-__add__"><strong>__add__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec3-__div__"><strong>__div__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec3-__eq__"><strong>__eq__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec3-__getitem__"><strong>__getitem__</strong></a>(self, index)</dt></dl>
+
+<dl><dt><a name="NoeVec3-__init__"><strong>__init__</strong></a>(self, vec3<font color="#909090">=(0.0, 0.0, 0.0)</font>)</dt></dl>
+
+<dl><dt><a name="NoeVec3-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec3-__mul__"><strong>__mul__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec3-__ne__"><strong>__ne__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec3-__neg__"><strong>__neg__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec3-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec3-__setitem__"><strong>__setitem__</strong></a>(self, index, value)</dt></dl>
+
+<dl><dt><a name="NoeVec3-__sub__"><strong>__sub__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec3-__truediv__"><strong>__truediv__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec3-binaryCompare"><strong>binaryCompare</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec3-cross"><strong>cross</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec3-dot"><strong>dot</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec3-fromBytes"><strong>fromBytes</strong></a>(otherBytes, bigEnd<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeVec3-getStorage"><strong>getStorage</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec3-length"><strong>length</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec3-lengthSq"><strong>lengthSq</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec3-lerp"><strong>lerp</strong></a>(self, other, fraction)</dt></dl>
+
+<dl><dt><a name="NoeVec3-normalize"><strong>normalize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec3-toAngles"><strong>toAngles</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec3-toAnglesDirect"><strong>toAnglesDirect</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec3-toBytes"><strong>toBytes</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec3-toMat43"><strong>toMat43</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec3-toVec4"><strong>toVec4</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeVec4">class <strong>NoeVec4</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#4-component&nbsp;Vector<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeVec4-__add__"><strong>__add__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec4-__div__"><strong>__div__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec4-__eq__"><strong>__eq__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec4-__getitem__"><strong>__getitem__</strong></a>(self, index)</dt></dl>
+
+<dl><dt><a name="NoeVec4-__init__"><strong>__init__</strong></a>(self, vec4<font color="#909090">=(0.0, 0.0, 0.0, 0.0)</font>)</dt></dl>
+
+<dl><dt><a name="NoeVec4-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec4-__mul__"><strong>__mul__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec4-__ne__"><strong>__ne__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec4-__neg__"><strong>__neg__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec4-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec4-__setitem__"><strong>__setitem__</strong></a>(self, index, value)</dt></dl>
+
+<dl><dt><a name="NoeVec4-__sub__"><strong>__sub__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec4-__truediv__"><strong>__truediv__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec4-binaryCompare"><strong>binaryCompare</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec4-dot"><strong>dot</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="NoeVec4-fromBytes"><strong>fromBytes</strong></a>(otherBytes, bigEnd<font color="#909090">=0</font>)</dt></dl>
+
+<dl><dt><a name="NoeVec4-getStorage"><strong>getStorage</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec4-length"><strong>length</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec4-lengthSq"><strong>lengthSq</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec4-lerp"><strong>lerp</strong></a>(self, other, fraction)</dt></dl>
+
+<dl><dt><a name="NoeVec4-normalize"><strong>normalize</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec4-toBytes"><strong>toBytes</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="NoeVec4-toVec3"><strong>toVec3</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="NoeVertWeight">class <strong>NoeVertWeight</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>#vertex&nbsp;weight.&nbsp;number&nbsp;of&nbsp;indices&nbsp;and&nbsp;weights&nbsp;should&nbsp;match.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="NoeVertWeight-__init__"><strong>__init__</strong></a>(self, indices, weights)</dt></dl>
+
+<dl><dt><a name="NoeVertWeight-numWeights"><strong>numWeights</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-noeAsciiFromBytes"><strong>noeAsciiFromBytes</strong></a>(bar)</dt><dd><tt>#force&nbsp;filtering&nbsp;to&nbsp;ascii&nbsp;range</tt></dd></dl>
+ <dl><dt><a name="-noeCFloatRepr"><strong>noeCFloatRepr</strong></a>(obj)</dt><dd><tt>#returns&nbsp;a&nbsp;c-array&nbsp;style&nbsp;float&nbsp;representation&nbsp;of&nbsp;a&nbsp;list&nbsp;in&nbsp;a&nbsp;string</tt></dd></dl>
+ <dl><dt><a name="-noeCalculateLocalBoneTransforms"><strong>noeCalculateLocalBoneTransforms</strong></a>(bones)</dt></dl>
+ <dl><dt><a name="-noeCheckGeneric"><strong>noeCheckGeneric</strong></a>(data)</dt><dd><tt>#can&nbsp;be&nbsp;referenced&nbsp;to&nbsp;bypass&nbsp;data&nbsp;format&nbsp;checks&nbsp;(not&nbsp;recommended&nbsp;if&nbsp;it's&nbsp;possible&nbsp;to&nbsp;identify&nbsp;a&nbsp;format&nbsp;by&nbsp;its&nbsp;raw&nbsp;content)</tt></dd></dl>
+ <dl><dt><a name="-noeCmpToKey"><strong>noeCmpToKey</strong></a>(cmpMethod)</dt></dl>
+ <dl><dt><a name="-noeDefaultCertPath"><strong>noeDefaultCertPath</strong></a>()</dt></dl>
+ <dl><dt><a name="-noeListBytes"><strong>noeListBytes</strong></a>(lobj)</dt><dd><tt>#converts&nbsp;a&nbsp;list&nbsp;into&nbsp;bytes&nbsp;(providing&nbsp;items&nbsp;in&nbsp;list&nbsp;support&nbsp;toBytes)</tt></dd></dl>
+ <dl><dt><a name="-noePack"><strong>noePack</strong></a> = pack(...)</dt><dd><tt>pack(fmt,&nbsp;v1,&nbsp;v2,&nbsp;...)&nbsp;-&gt;&nbsp;bytes<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;bytes&nbsp;<a href="builtins.html#object">object</a>&nbsp;containing&nbsp;the&nbsp;values&nbsp;v1,&nbsp;v2,&nbsp;...&nbsp;packed&nbsp;according<br>
+to&nbsp;the&nbsp;format&nbsp;string&nbsp;fmt.&nbsp;&nbsp;See&nbsp;help(struct)&nbsp;for&nbsp;more&nbsp;on&nbsp;format&nbsp;strings.</tt></dd></dl>
+ <dl><dt><a name="-noePadByteString"><strong>noePadByteString</strong></a>(str, padLen)</dt><dd><tt>#convert&nbsp;a&nbsp;string&nbsp;to&nbsp;a&nbsp;padded&nbsp;bytearray</tt></dd></dl>
+ <dl><dt><a name="-noePaddedByteArray"><strong>noePaddedByteArray</strong></a>(data, alignment)</dt><dd><tt>#pad&nbsp;a&nbsp;bytearray&nbsp;out&nbsp;to&nbsp;a&nbsp;given&nbsp;alignment&nbsp;(assumes&nbsp;power&nbsp;of&nbsp;2&nbsp;alignment)</tt></dd></dl>
+ <dl><dt><a name="-noeParseToZero"><strong>noeParseToZero</strong></a>(data)</dt><dd><tt>#construct&nbsp;a&nbsp;bytearray&nbsp;containing&nbsp;the&nbsp;contents&nbsp;of&nbsp;data&nbsp;up&nbsp;to&nbsp;the&nbsp;first&nbsp;0</tt></dd></dl>
+ <dl><dt><a name="-noeProcessImage"><strong>noeProcessImage</strong></a>(data, pixelImageInfo, processFunction, *processFunctionArgs)</dt><dd><tt>#pixelImageInfo&nbsp;should&nbsp;be&nbsp;a&nbsp;list&nbsp;of&nbsp;faceCount,&nbsp;mipCount,&nbsp;faceSize&nbsp;(total&nbsp;size&nbsp;of&nbsp;all&nbsp;mips&nbsp;for&nbsp;1&nbsp;face),&nbsp;mipsInfo<br>
+#mipsInfo&nbsp;is&nbsp;then&nbsp;a&nbsp;list&nbsp;of&nbsp;tuples&nbsp;in&nbsp;the&nbsp;form&nbsp;of&nbsp;(mipWidth,&nbsp;mipHeight,&nbsp;mipOffset,&nbsp;mipSize)</tt></dd></dl>
+ <dl><dt><a name="-noeSafeGet"><strong>noeSafeGet</strong></a>(obj, attr, defaultValue<font color="#909090">=None</font>)</dt><dd><tt>#returns&nbsp;None&nbsp;if&nbsp;the&nbsp;<a href="builtins.html#object">object</a>&nbsp;doesn't&nbsp;have&nbsp;the&nbsp;given&nbsp;attribute,&nbsp;otherwise&nbsp;returns&nbsp;the&nbsp;attribute</tt></dd></dl>
+ <dl><dt><a name="-noeStrFromBytes"><strong>noeStrFromBytes</strong></a>(bar, enc<font color="#909090">='ASCII'</font>)</dt><dd><tt>#converts&nbsp;bytes&nbsp;to&nbsp;string&nbsp;assuming&nbsp;standard&nbsp;ascii&nbsp;encoding</tt></dd></dl>
+ <dl><dt><a name="-noeStringizeObjects"><strong>noeStringizeObjects</strong></a>(*args)</dt><dd><tt>#turns&nbsp;print-style&nbsp;args&nbsp;list&nbsp;into&nbsp;a&nbsp;string</tt></dd></dl>
+ <dl><dt><a name="-noeSuper"><strong>noeSuper</strong></a>(clobj)</dt><dd><tt>#shortcut&nbsp;to&nbsp;get&nbsp;superclass</tt></dd></dl>
+ <dl><dt><a name="-noeTupleToList"><strong>noeTupleToList</strong></a>(tup)</dt><dd><tt>#converts&nbsp;a&nbsp;single-dimension&nbsp;tuple&nbsp;to&nbsp;a&nbsp;list</tt></dd></dl>
+ <dl><dt><a name="-noeUnpack"><strong>noeUnpack</strong></a> = unpack(...)</dt><dd><tt>unpack(fmt,&nbsp;buffer)&nbsp;-&gt;&nbsp;(v1,&nbsp;v2,&nbsp;...)<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;tuple&nbsp;containing&nbsp;values&nbsp;unpacked&nbsp;according&nbsp;to&nbsp;the&nbsp;format&nbsp;string<br>
+fmt.&nbsp;&nbsp;Requires&nbsp;len(buffer)&nbsp;==&nbsp;calcsize(fmt).&nbsp;See&nbsp;help(struct)&nbsp;for&nbsp;more<br>
+on&nbsp;format&nbsp;strings.</tt></dd></dl>
+ <dl><dt><a name="-noeUnpackFrom"><strong>noeUnpackFrom</strong></a> = unpack_from(...)</dt><dd><tt>unpack_from(fmt,&nbsp;buffer,&nbsp;offset=0)&nbsp;-&gt;&nbsp;(v1,&nbsp;v2,&nbsp;...)<br>
+&nbsp;<br>
+Return&nbsp;a&nbsp;tuple&nbsp;containing&nbsp;values&nbsp;unpacked&nbsp;according&nbsp;to&nbsp;the&nbsp;format&nbsp;string<br>
+fmt.&nbsp;&nbsp;Requires&nbsp;len(buffer[offset:])&nbsp;&gt;=&nbsp;calcsize(fmt).&nbsp;&nbsp;See&nbsp;help(struct)<br>
+for&nbsp;more&nbsp;on&nbsp;format&nbsp;strings.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>NOESEEK_ABS</strong> = 0<br>
+<strong>NOESEEK_REL</strong> = 1<br>
+<strong>NOE_BIGENDIAN</strong> = 1<br>
+<strong>NOE_LITTLEENDIAN</strong> = 0<br>
+<strong>identityMat43Tuple</strong> = ((1.0, 0.0, 0.0), (0.0, 1.0, 0.0), (0.0, 0.0, 1.0), (0.0, 0.0, 0.0))<br>
+<strong>identityMat44Tuple</strong> = ((1.0, 0.0, 0.0, 0.0), (0.0, 1.0, 0.0, 0.0), (0.0, 0.0, 1.0, 0.0), (0.0, 0.0, 0.0, 1.0))</td></tr></table>
+</body></html>
